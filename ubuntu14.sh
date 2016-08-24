@@ -36,7 +36,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/zero9911/pritunl/master/conf/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>Setup by MKSSHVPN </pre>" > /home/vps/public_html/index.html
+echo "<pre>Setup by Fadhil Morshidi </pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/zero9911/pritunl/master/conf/vps.conf"
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
@@ -70,10 +70,12 @@ echo "-MongoDB"
 echo "-Vnstat"
 echo "-Web Server"
 echo "-Squid Proxy Port 7166,60000"
-echo "BY MKSSHVPN"
+echo "BY Mr's Dummy"
+echo "Script Dummies By Fadhil Morshidi"
 echo "TimeZone   :  Malaysia"
 echo "Vnstat     :  http://$MYIP:81/vnstat"
 echo "Pritunl    :  https://$MYIP"
 echo "Sila login ke pritunl untuk proceed step seterusnya"
 echo "Sila copy code dibawah untuk Pritunl anda"
 pritunl setup-key
+rm -f /root/ubuntu14.sh
