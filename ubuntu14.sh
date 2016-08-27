@@ -13,6 +13,15 @@ apt-get --assume-yes update
 apt-get --assume-yes install pritunl mongodb-org
 service pritunl start
 
+# install webmin
+cd
+wget -O webmin-current.deb "http://www.webmin.com/download/deb/webmin-current.deb"
+dpkg -i --force-all webmin-current.deb;
+apt-get -y -f install;
+rm /root/webmin-current.deb
+service webmin restart
+service vnstat restart
+
 # Install Squid
 apt-get -y install squid3
 cp /etc/squid3/squid.conf /etc/squid3/squid.conf.orig
@@ -66,6 +75,7 @@ cd
 clear
 echo "Script ini hanya mengandungi :-"
 echo "-Pritunl"
+echo "-webmin"
 echo "-MongoDB"
 echo "-Vnstat"
 echo "-Web Server"
@@ -73,6 +83,7 @@ echo "-Squid Proxy Port 7166,60000"
 echo "BY Mr's Dummy"
 echo "Script Dummies By Fadhil Morshidi"
 echo "TimeZone   :  Malaysia"
+echo "-webmin    :  http://$MYIP:10000/"
 echo "Vnstat     :  http://$MYIP:81/vnstat"
 echo "Pritunl    :  https://$MYIP"
 echo "Sila login ke pritunl untuk proceed step seterusnya"
