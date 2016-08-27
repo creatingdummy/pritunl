@@ -9,7 +9,7 @@ Script ini hanya mengandungi
 - MongoDB
 - Vnstat
 - Web Server
-- Squid Proxy Port 7166,60000"
+- Squid Proxy Port 80,8080
 
 **TimeZone**   :  Malaysia
 
